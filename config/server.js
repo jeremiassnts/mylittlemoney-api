@@ -6,9 +6,9 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 consign({ cwd: process.cwd() })
-    .include("controllers")
-    .then("routes")
-    .then("models")
+    .include("./app/controllers")
+    .then("./app/routes")
+    .then("./app/models")
     .then("./config/db.js")
     .into(app)
 
