@@ -5,7 +5,7 @@ var app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-consign({ cwd: process.cwd() + "./app" })
+consign({ cwd: process.cwd() })
     .include("controllers")
     .then("routes")
     .then("models")
