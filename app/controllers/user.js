@@ -7,7 +7,7 @@ var criarUsuario = async (context, req, res) => {
     try {
         var user = req.body
         //verifica se usuário existe
-        var dbUser = await context.models.user.get(user.username, user.email, pool)
+        var dbUser = await context.models.user.getUserByUserEmail(user.username, user.email, pool)
         if (dbUser) {
             await pool.end()
             res.status(400).json({
@@ -76,14 +76,12 @@ var editarUsuario = async (context, req, res) => {
         await pool.end()
         res.json({
             error: false,
-            auth: true,
             message: "Editado com sucesso"
         })
     } catch (error) {
         await pool.end()
         res.status(400).json({
             error: true,
-            auth: false,
             message: error.stack
         })
     }
