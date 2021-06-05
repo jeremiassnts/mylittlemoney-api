@@ -6,10 +6,10 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 consign({ cwd: 'app' })
-    .include("controllers")
-    .then("routes")
+    .include("services")
+    .then("controllers")
     .then("models")
-    .then("database")
+    .then("routes")    
     .into(app)
 
 module.exports = app

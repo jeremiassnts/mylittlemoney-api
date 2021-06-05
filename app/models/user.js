@@ -3,7 +3,7 @@ var sjcl = require('sjcl')
 var create = async (user, client) => {
     try {
         await client.query("BEGIN")
-        
+
         //cria endereco
         var result = await client.query(`insert into app.endereco (cep, logradouro, numero, bairro, cidade, estado, pais, complemento) values ($1, $2, $3, $4, $5, $6, $7, $8) returning *`,
             [user.cep, user.logradouro, user.numero, user.bairro, user.cidade, user.estado, user.pais, user.complemento])
@@ -48,4 +48,21 @@ var getNumeroConta = async (client) => {
     return numero_conta
 }
 
-module.exports = { create, get }
+var edit = async (userId, fields, client) => {
+    try {
+        await client.query("BEGIN")
+
+        var result = await client.query(`update app.usuario set nome = '${fields.nome}', ocupacao = '${fields.ocupacao}' where id = ${userId} returning *`)
+        const { telefoneid } = result.rows[0]
+
+        await client.query(`update app.telefone set ddi = '${fields.ddi}', ddd = '${fields.ddd}', numero = '${fields.telefone}' where id = ${telefoneid}`)
+
+        await client.query("COMMIT")
+        return result.rows[0]
+    } catch (error) {
+        await client.query("ROLLBACK")
+        throw error
+    }
+}
+
+module.exports = { create, get, edit }
