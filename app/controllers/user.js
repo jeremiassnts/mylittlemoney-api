@@ -1,19 +1,22 @@
+require('dotenv-safe').config()
+const jwt = require('jsonwebtoken')
+const sjcl = require('sjcl')
+
 var criarUsuario = async (context, req, res) => {
-    var client = context.database.db.getPool()
+    var pool = context.database.db.getPool()
     try {
         var user = req.body
-        // client.connect()
         //verifica se usuário existe
-        var dbUser = await context.models.user.get(user.username, user.email, client)
+        var dbUser = await context.models.user.get(user.username, user.email, pool)
         if (dbUser) {
-            await client.end()
+            await pool.end()
             res.status(400).json({
                 error: true,
                 message: "Usuário já existe"
             })
         } else {
-            var createdUser = await context.models.user.create(user, client)
-            await client.end()
+            var createdUser = await context.models.user.create(user, pool)
+            await pool.end()
             res.status(201).json({
                 error: false,
                 user: {
@@ -24,7 +27,7 @@ var criarUsuario = async (context, req, res) => {
             })
         }
     } catch (error) {
-        await client.end()
+        await pool.end()
         res.status(400).json({
             error: true,
             message: error.stack
@@ -32,4 +35,33 @@ var criarUsuario = async (context, req, res) => {
     }
 }
 
-module.exports = { criarUsuario }
+var login = async (context, req, res) => {
+    var pool = context.database.db.getPool()
+    try {
+        var user = req.body
+        const bits = sjcl.hash.sha256.hash(user.senha)
+        const hash = sjcl.codec.hex.fromBits(bits)
+        var result = await pool.query(`select * from app.usuario where email = '${user.email}' and senha = '${hash}'`)
+        if (result.rows.length > 0) {
+            const token = jwt.sign({ id: result.rows[0].id }, process.env.SECRET, { expiresIn: '5 days' })
+            res.json({
+                error: false,
+                auth: true,
+                token
+            })
+        } else {
+            res.status(400).json({
+                error: true,
+                auth: false,
+                token: null
+            })
+        }
+    } catch (error) {
+        res.status(400).json({
+            error: true,
+            message: error.stack
+        })
+    }
+}
+
+module.exports = { criarUsuario, login }
