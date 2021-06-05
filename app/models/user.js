@@ -33,8 +33,13 @@ var create = async (user, client) => {
     }
 }
 
-var get = async (username, email, client) => {
+var getUserByUserEmail = async (username, email, client) => {
     var result = await client.query(`select * from app.usuario where username = '${username}' or email = '${email}'`)
+    return result.rows[0]
+}
+
+var getUserById = async (id, client) => {
+    var result = await client.query(`select * from app.usuario where id = ${id}`)
     return result.rows[0]
 }
 
@@ -65,4 +70,4 @@ var edit = async (userId, fields, client) => {
     }
 }
 
-module.exports = { create, get, edit }
+module.exports = { create, getUserByUserEmail, getUserById, edit }
