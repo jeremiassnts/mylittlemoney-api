@@ -5,11 +5,11 @@ var app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-consign({ cwd: process.cwd() })
-    .include("./app/controllers")
-    .then("./app/routes")
-    .then("./app/models")
-    .then("./config/db.js")
+consign({ cwd: 'app' })
+    .include("controllers")
+    .then("routes")
+    .then("models")
+    .then("database")
     .into(app)
 
 module.exports = app

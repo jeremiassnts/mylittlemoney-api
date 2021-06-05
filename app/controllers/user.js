@@ -1,10 +1,10 @@
 var criarUsuario = async (context, req, res) => {
-    var client = context.config.db.getPool()
+    var client = context.database.db.getPool()
     try {
         var user = req.body
         // client.connect()
         //verifica se usuário existe
-        var dbUser = await context.app.models.user.get(user.username, user.email, client)
+        var dbUser = await context.models.user.get(user.username, user.email, client)
         if (dbUser) {
             await client.end()
             res.status(400).json({
@@ -12,11 +12,15 @@ var criarUsuario = async (context, req, res) => {
                 message: "Usuário já existe"
             })
         } else {
-            var createdUser = await context.app.models.user.create(user, client)
+            var createdUser = await context.models.user.create(user, client)
             await client.end()
             res.status(201).json({
                 error: false,
-                user: createdUser
+                user: {
+                    nome: createdUser.nome,
+                    username: createdUser.username,
+                    email: createdUser.email
+                }
             })
         }
     } catch (error) {
