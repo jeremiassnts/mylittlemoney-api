@@ -43,6 +43,41 @@ var getUserById = async (id, client) => {
     return result.rows[0]
 }
 
+var getCompleteUserById = async (id, client) => {
+    var result = await client.query(`select * from app.usuario where id = ${id}`)
+    var user = result.rows[0]
+
+    result = await client.query(`select * from app.telefone where id = ${user.telefoneid}`)
+    if (result.rows.length > 0) {
+        delete user.telefoneid
+        user.telefone = result.rows[0]
+        delete user.telefone.id
+    }
+
+    result = await client.query(`select * from app.endereco where id = ${user.enderecoid}`)
+    if (result.rows.length > 0) {
+        delete user.enderecoid
+        user.endereco = result.rows[0]
+        delete user.endereco.id
+    }
+
+    result = await client.query(`select * from app.contausuario where id = ${user.contausuarioid}`)
+    if (result.rows.length > 0) {
+        delete user.contausuarioid
+        user.contausuario = result.rows[0]
+        delete user.contausuario.id
+
+        result = await client.query(`select * from app.contabancaria where id = ${user.contausuario.contabancariaid}`)
+        user.contausuario.contabancaria = result.rows[0]
+        delete user.contausuario.contabancaria.id
+    }
+
+    delete user.id
+    delete user.senha
+
+    return user
+}
+
 var getNumeroConta = async (client) => {
     var n = Math.floor(Math.random() * 100000000);
     var numero_conta = `${new Array(9 - n.toString().length).fill(0).join("")}${n}`
@@ -70,4 +105,4 @@ var edit = async (userId, fields, client) => {
     }
 }
 
-module.exports = { create, getUserByUserEmail, getUserById, edit }
+module.exports = { create, getUserByUserEmail, getUserById, edit, getCompleteUserById }

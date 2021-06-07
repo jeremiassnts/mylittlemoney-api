@@ -87,4 +87,21 @@ var editarUsuario = async (context, req, res) => {
     }
 }
 
-module.exports = { criarUsuario, login, editarUsuario }
+var getUsuario = async (context, req, res) => {
+    var pool = context.services.db.getPool()
+    try {
+        var user = await context.models.user.getCompleteUserById(req.userId, pool)
+        res.json({
+            error: false,
+            user
+        })
+    } catch (error) {
+        await pool.end()
+        res.status(400).json({
+            error: true,
+            message: error.stack
+        })
+    }
+}
+
+module.exports = { criarUsuario, login, editarUsuario, getUsuario }
