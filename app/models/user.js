@@ -51,30 +51,33 @@ var getCompleteUserById = async (id, client) => {
     var result = await client.query(`select * from app.usuario where id = ${id}`)
     var user = result.rows[0]
 
-    result = await client.query(`select * from app.telefone where id = ${user.telefoneid}`)
-    if (result.rows.length > 0) {
-        delete user.telefoneid
+    if (user.telefoneid) {
+        result = await client.query(`select * from app.telefone where id = ${user.telefoneid}`)
         user.telefone = result.rows[0]
         delete user.telefone.id
+    } else {
+        user.telefone = null
     }
+    delete user.telefoneid
 
-    result = await client.query(`select * from app.endereco where id = ${user.enderecoid}`)
-    if (result.rows.length > 0) {
-        delete user.enderecoid
+    if (user.enderecoid) {
+        result = await client.query(`select * from app.endereco where id = ${user.enderecoid}`)
         user.endereco = result.rows[0]
         delete user.endereco.id
+    } else {
+        user.endereco = null
     }
+    delete user.enderecoid
 
     result = await client.query(`select * from app.contausuario where id = ${user.contausuarioid}`)
-    if (result.rows.length > 0) {
-        delete user.contausuarioid
-        user.contausuario = result.rows[0]
-        delete user.contausuario.id
+    delete user.contausuarioid
+    user.contausuario = result.rows[0]
+    delete user.contausuario.id
 
-        result = await client.query(`select * from app.contabancaria where id = ${user.contausuario.contabancariaid}`)
-        user.contausuario.contabancaria = result.rows[0]
-        delete user.contausuario.contabancaria.id
-    }
+    result = await client.query(`select * from app.contabancaria where id = ${user.contausuario.contabancariaid}`)
+    user.contausuario.contabancaria = result.rows[0]
+    delete user.contausuario.contabancaria.id
+    delete user.contausuario.contabancariaid
 
     delete user.id
     delete user.senha
