@@ -7,7 +7,7 @@ var criarUsuario = async (context, req, res) => {
     try {
         var user = req.body
         //verifica se usuário existe
-        var dbUser = await context.models.user.getUserByUserEmail(user.username, user.email, pool)
+        var dbUser = await context.models.user.getUserByEmail(user.email, pool)
         if (dbUser) {
             await pool.end()
             res.status(400).json({
