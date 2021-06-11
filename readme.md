@@ -17,6 +17,8 @@
 ### Conta
     GET /conta/resumo
         Rota para buscar resumo de conta de usuário baseada em token de autenticação
+    POST /conta/transferir
+        Rota para realizar transferência para uma conta externa partindo de usuário autenticado com objeto { valor, numero_conta, numero_agencia, numero_banco, titularidade, cnpj_cpf, tipo_pessoa, tipo_transferencia }
 ### Depósito
     POST /deposito/criarBoleto
         Rota autenticada para criar boleto associado a conta de usuário com objeto { data_vencimento, valor }
