@@ -71,8 +71,8 @@ var login = async (context, req, res) => {
 var editarUsuario = async (context, req, res) => {
     var pool = context.services.db.getPool()
     try {
-        var user = req.body
-        await context.models.user.edit(req.userId, user, pool)
+        var edit = req.body
+        await context.models.user.edit(req.userId, edit, pool)
         await pool.end()
         res.json({
             error: false,
