@@ -25,4 +25,25 @@ var criarBoleto = async (context, req, res) => {
     }
 }
 
-module.exports = { criarBoleto }
+var criarDeposito = async (context, req, res) => {
+    var pool = context.services.db.getPool()
+    try {
+        var deposito = req.body
+        var user = await context.models.user.getUserById(req.userId, pool)
+        await context.models.deposito.criarDeposito(user.contausuarioid, deposito, pool)
+
+        await pool.end()
+        res.json({
+            error: false,
+            message: "Depósito realizado com sucesso"
+        })
+    } catch (error) {
+        await pool.end()
+        res.status(400).json({
+            error: true,
+            message: error.stack
+        })
+    }
+}
+
+module.exports = { criarBoleto, criarDeposito }

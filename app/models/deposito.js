@@ -18,6 +18,18 @@ var criarBoleto = async (context, contaUsuarioId, boleto, client) => {
     }
 }
 
+var criarDeposito = async (contaUsuarioId, deposito, client) => {
+    try {
+        await client.query("BEGIN")
+
+        await client.query(`update app.contausuario set saldo_bancario = saldo_bancario + $1 where id = $2`, [deposito.valor, contaUsuarioId])
+
+        await client.query("COMMIT")
+    } catch (error) {
+        await client.query("ROLLBACK")
+        throw error
+    }
+}
 var getCodigoBoleto = async (client, context) => {
     var codigo = context.services.utils.generateNumberString(48)
     var result = await client.query(`select * from app.boleto where codigo = '${codigo}'`)
@@ -27,4 +39,4 @@ var getCodigoBoleto = async (client, context) => {
     return codigo
 }
 
-module.exports = { criarBoleto }
+module.exports = { criarBoleto, criarDeposito }
