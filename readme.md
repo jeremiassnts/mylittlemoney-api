@@ -20,3 +20,5 @@
 ### Depósito
     POST /deposito/criarBoleto
         Rota autenticada para criar boleto associado a conta de usuário com objeto { data_vencimento, valor }
+    POST /deposito/criarDeposito
+        Rota autenticada para criar depósito na conta do usuário com objeto { valor }
