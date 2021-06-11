@@ -98,11 +98,15 @@ var getNumeroConta = async (client) => {
 var edit = async (userId, fields, client) => {
     try {
         await client.query("BEGIN")
+        const { user, telefone, endereco } = fields
+        var result = await client.query(`update app.usuario set nome = '${user.nome}', username = '${user.username}', cpf = '${user.cpf}'`
+        + `, rg = '${user.rg}', ocupacao = '${user.ocupacao}' where id = ${userId} returning *`)
+        const { telefoneid, enderecoid } = result.rows[0]
 
-        var result = await client.query(`update app.usuario set nome = '${fields.nome}', ocupacao = '${fields.ocupacao}' where id = ${userId} returning *`)
-        const { telefoneid } = result.rows[0]
+        await client.query(`update app.telefone set ddi = '${telefone.ddi}', ddd = '${telefone.ddd}', numero = '${telefone.telefone}' where id = ${telefoneid}`)
 
-        await client.query(`update app.telefone set ddi = '${fields.ddi}', ddd = '${fields.ddd}', numero = '${fields.telefone}' where id = ${telefoneid}`)
+        await client.query(`update app.endereco set cep = '${endereco.cep}', logradouro = '${endereco.logradouro}', numero = ${endereco.numero}, bairro = '${endereco.bairro}'`
+        + `, cidade = '${endereco.cidade}', estado = '${endereco.estado}', pais = '${endereco.pais}', complemento = '${endereco.complemento}' where id = ${enderecoid}`)
 
         await client.query("COMMIT")
         return result.rows[0]
