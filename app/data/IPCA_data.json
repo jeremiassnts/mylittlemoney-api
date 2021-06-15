@@ -1,0 +1,182 @@
+[
+    {
+        "nome": "IPCA + 3.12% a.a.",
+        "tarifa": 3.12,
+        "data_validade": "2022-01-15T00:40:43.115Z",
+        "rentabilidade": 107.15
+    },
+    {
+        "nome": "IPCA + 1.3% a.a.",
+        "tarifa": 1.3,
+        "data_validade": "2022-11-25T10:58:08.314Z",
+        "rentabilidade": 105.91
+    },
+    {
+        "nome": "IPCA + 0.89% a.a.",
+        "tarifa": 0.89,
+        "data_validade": "2022-07-20T14:33:58.260Z",
+        "rentabilidade": 107.35
+    },
+    {
+        "nome": "IPCA + 0.32% a.a.",
+        "tarifa": 0.32,
+        "data_validade": "2022-06-05T01:41:54.117Z",
+        "rentabilidade": 104.81
+    },
+    {
+        "nome": "IPCA + 0.62% a.a.",
+        "tarifa": 0.62,
+        "data_validade": "2022-07-15T00:51:16.600Z",
+        "rentabilidade": 110.9
+    },
+    {
+        "nome": "IPCA + 0.54% a.a.",
+        "tarifa": 0.54,
+        "data_validade": "2021-09-21T20:03:04.075Z",
+        "rentabilidade": 114.21
+    },
+    {
+        "nome": "IPCA + 1.76% a.a.",
+        "tarifa": 1.76,
+        "data_validade": "2022-10-12T02:31:29.382Z",
+        "rentabilidade": 116.98
+    },
+    {
+        "nome": "IPCA + 3% a.a.",
+        "tarifa": 3,
+        "data_validade": "2022-09-14T04:33:37.817Z",
+        "rentabilidade": 108.13
+    },
+    {
+        "nome": "IPCA + 0.94% a.a.",
+        "tarifa": 0.94,
+        "data_validade": "2021-12-04T06:49:43.570Z",
+        "rentabilidade": 101.39
+    },
+    {
+        "nome": "IPCA + 2.89% a.a.",
+        "tarifa": 2.89,
+        "data_validade": "2023-03-09T16:48:09.158Z",
+        "rentabilidade": 101.15
+    },
+    {
+        "nome": "IPCA + 1.03% a.a.",
+        "tarifa": 1.03,
+        "data_validade": "2022-05-02T04:03:36.178Z",
+        "rentabilidade": 115.03
+    },
+    {
+        "nome": "IPCA + 2.09% a.a.",
+        "tarifa": 2.09,
+        "data_validade": "2023-04-13T08:36:33.777Z",
+        "rentabilidade": 119.76
+    },
+    {
+        "nome": "IPCA + 0.58% a.a.",
+        "tarifa": 0.58,
+        "data_validade": "2023-01-25T23:28:17.804Z",
+        "rentabilidade": 109.98
+    },
+    {
+        "nome": "IPCA + 2.57% a.a.",
+        "tarifa": 2.57,
+        "data_validade": "2023-05-24T09:05:00.237Z",
+        "rentabilidade": 107.03
+    },
+    {
+        "nome": "IPCA + 0.82% a.a.",
+        "tarifa": 0.82,
+        "data_validade": "2022-08-08T22:23:55.239Z",
+        "rentabilidade": 100.33
+    },
+    {
+        "nome": "IPCA + 1.15% a.a.",
+        "tarifa": 1.15,
+        "data_validade": "2021-07-03T10:35:30.318Z",
+        "rentabilidade": 116.63
+    },
+    {
+        "nome": "IPCA + 0.84% a.a.",
+        "tarifa": 0.84,
+        "data_validade": "2022-05-15T23:08:27.808Z",
+        "rentabilidade": 116.84
+    },
+    {
+        "nome": "IPCA + 2.62% a.a.",
+        "tarifa": 2.62,
+        "data_validade": "2022-02-21T23:16:23.781Z",
+        "rentabilidade": 117.67
+    },
+    {
+        "nome": "IPCA + 3.39% a.a.",
+        "tarifa": 3.39,
+        "data_validade": "2022-02-13T00:19:43.058Z",
+        "rentabilidade": 115.77
+    },
+    {
+        "nome": "IPCA + 0.87% a.a.",
+        "tarifa": 0.87,
+        "data_validade": "2021-06-29T13:49:27.876Z",
+        "rentabilidade": 102.84
+    },
+    {
+        "nome": "IPCA + 0.66% a.a.",
+        "tarifa": 0.66,
+        "data_validade": "2022-04-02T18:11:29.439Z",
+        "rentabilidade": 103.18
+    },
+    {
+        "nome": "IPCA + 3.11% a.a.",
+        "tarifa": 3.11,
+        "data_validade": "2021-08-27T17:39:29.340Z",
+        "rentabilidade": 116.05
+    },
+    {
+        "nome": "IPCA + 0.53% a.a.",
+        "tarifa": 0.53,
+        "data_validade": "2021-12-06T04:58:05.008Z",
+        "rentabilidade": 114.69
+    },
+    {
+        "nome": "IPCA + 1.44% a.a.",
+        "tarifa": 1.44,
+        "data_validade": "2023-04-01T19:47:08.886Z",
+        "rentabilidade": 105.04
+    },
+    {
+        "nome": "IPCA + 1.92% a.a.",
+        "tarifa": 1.92,
+        "data_validade": "2022-02-23T01:47:17.242Z",
+        "rentabilidade": 115.77
+    },
+    {
+        "nome": "IPCA + 0.55% a.a.",
+        "tarifa": 0.55,
+        "data_validade": "2022-09-29T23:21:24.757Z",
+        "rentabilidade": 119.16
+    },
+    {
+        "nome": "IPCA + 1.6% a.a.",
+        "tarifa": 1.6,
+        "data_validade": "2022-09-15T15:37:35.963Z",
+        "rentabilidade": 116.66
+    },
+    {
+        "nome": "IPCA + 1.63% a.a.",
+        "tarifa": 1.63,
+        "data_validade": "2022-04-30T08:55:43.178Z",
+        "rentabilidade": 113
+    },
+    {
+        "nome": "IPCA + 1.12% a.a.",
+        "tarifa": 1.12,
+        "data_validade": "2022-06-11T22:11:55.439Z",
+        "rentabilidade": 104.63
+    },
+    {
+        "nome": "IPCA + 2.68% a.a.",
+        "tarifa": 2.68,
+        "data_validade": "2022-05-23T21:40:18.939Z",
+        "rentabilidade": 107.08
+    }
+]

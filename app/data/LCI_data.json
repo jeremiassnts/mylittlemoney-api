@@ -1,0 +1,302 @@
+[
+    {
+        "nome": "LCI 286 DIAS",
+        "tarifa": 0.05,
+        "data_validade": "2022-03-29T12:50:30.237Z",
+        "rentabilidade": 116.93
+    },
+    {
+        "nome": "LCI 993 DIAS",
+        "tarifa": 0.21,
+        "data_validade": "2024-03-05T15:16:11.863Z",
+        "rentabilidade": 115.05
+    },
+    {
+        "nome": "LCI 783 DIAS",
+        "tarifa": 0.78,
+        "data_validade": "2023-08-08T05:29:51.144Z",
+        "rentabilidade": 111.66
+    },
+    {
+        "nome": "LCI 705 DIAS",
+        "tarifa": 0.86,
+        "data_validade": "2023-05-21T21:43:30.773Z",
+        "rentabilidade": 117.47
+    },
+    {
+        "nome": "LCI 340 DIAS",
+        "tarifa": 0.71,
+        "data_validade": "2022-05-22T17:42:24.279Z",
+        "rentabilidade": 115.87
+    },
+    {
+        "nome": "LCI 1058 DIAS",
+        "tarifa": 0.75,
+        "data_validade": "2024-05-08T22:45:20.559Z",
+        "rentabilidade": 113.49
+    },
+    {
+        "nome": "LCI 873 DIAS",
+        "tarifa": 0.31,
+        "data_validade": "2023-11-06T09:43:42.489Z",
+        "rentabilidade": 117.48
+    },
+    {
+        "nome": "LCI 947 DIAS",
+        "tarifa": 0.29,
+        "data_validade": "2024-01-19T19:54:55.187Z",
+        "rentabilidade": 118.74
+    },
+    {
+        "nome": "LCI 705 DIAS",
+        "tarifa": 1.22,
+        "data_validade": "2023-05-22T07:49:52.805Z",
+        "rentabilidade": 101.61
+    },
+    {
+        "nome": "LCI 82 DIAS",
+        "tarifa": 1.31,
+        "data_validade": "2021-09-06T19:39:21.031Z",
+        "rentabilidade": 111.16
+    },
+    {
+        "nome": "LCI 718 DIAS",
+        "tarifa": 0.82,
+        "data_validade": "2023-06-04T10:25:14.618Z",
+        "rentabilidade": 115.25
+    },
+    {
+        "nome": "LCI 125 DIAS",
+        "tarifa": 0.92,
+        "data_validade": "2021-10-19T05:36:21.749Z",
+        "rentabilidade": 114.61
+    },
+    {
+        "nome": "LCI 81 DIAS",
+        "tarifa": 0.96,
+        "data_validade": "2021-09-04T23:15:14.817Z",
+        "rentabilidade": 113.27
+    },
+    {
+        "nome": "LCI 511 DIAS",
+        "tarifa": 0.03,
+        "data_validade": "2022-11-09T06:18:48.692Z",
+        "rentabilidade": 102.2
+    },
+    {
+        "nome": "LCI 249 DIAS",
+        "tarifa": 0.86,
+        "data_validade": "2022-02-20T15:31:38.160Z",
+        "rentabilidade": 106.23
+    },
+    {
+        "nome": "LCI 225 DIAS",
+        "tarifa": 1.48,
+        "data_validade": "2022-01-26T22:12:36.035Z",
+        "rentabilidade": 106.85
+    },
+    {
+        "nome": "LCI 275 DIAS",
+        "tarifa": 0.59,
+        "data_validade": "2022-03-18T07:51:10.624Z",
+        "rentabilidade": 111.26
+    },
+    {
+        "nome": "LCI 325 DIAS",
+        "tarifa": 1.01,
+        "data_validade": "2022-05-07T05:12:51.952Z",
+        "rentabilidade": 102.77
+    },
+    {
+        "nome": "LCI 803 DIAS",
+        "tarifa": 0.17,
+        "data_validade": "2023-08-28T16:11:41.922Z",
+        "rentabilidade": 104.18
+    },
+    {
+        "nome": "LCI 364 DIAS",
+        "tarifa": 1.15,
+        "data_validade": "2022-06-15T17:51:25.260Z",
+        "rentabilidade": 105.52
+    },
+    {
+        "nome": "LCI 740 DIAS",
+        "tarifa": 0.46,
+        "data_validade": "2023-06-25T23:26:10.784Z",
+        "rentabilidade": 115.84
+    },
+    {
+        "nome": "LCI 103 DIAS",
+        "tarifa": 0,
+        "data_validade": "2021-09-27T13:25:51.055Z",
+        "rentabilidade": 102.39
+    },
+    {
+        "nome": "LCI 1065 DIAS",
+        "tarifa": 0.36,
+        "data_validade": "2024-05-16T09:40:38.826Z",
+        "rentabilidade": 104.49
+    },
+    {
+        "nome": "LCI 70 DIAS",
+        "tarifa": 0.3,
+        "data_validade": "2021-08-25T16:43:27.667Z",
+        "rentabilidade": 102.45
+    },
+    {
+        "nome": "LCI 988 DIAS",
+        "tarifa": 1.08,
+        "data_validade": "2024-02-29T05:40:13.851Z",
+        "rentabilidade": 102.9
+    },
+    {
+        "nome": "LCI 25 DIAS",
+        "tarifa": 0.59,
+        "data_validade": "2021-07-11T11:39:48.491Z",
+        "rentabilidade": 109.66
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 106 DIAS",
+        "tarifa": 0.64,
+        "data_validade": "2021-09-30T03:09:30.597Z",
+        "rentabilidade": 110.53
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 578 DIAS",
+        "tarifa": 0.31,
+        "data_validade": "2023-01-15T11:12:41.601Z",
+        "rentabilidade": 104.22
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 318 DIAS",
+        "tarifa": 1,
+        "data_validade": "2022-04-29T22:53:55.242Z",
+        "rentabilidade": 116.16
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 601 DIAS",
+        "tarifa": 0.4,
+        "data_validade": "2023-02-07T16:43:03.232Z",
+        "rentabilidade": 115.2
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 640 DIAS",
+        "tarifa": 1.32,
+        "data_validade": "2023-03-18T08:28:19.596Z",
+        "rentabilidade": 101.29
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 41 DIAS",
+        "tarifa": 0.84,
+        "data_validade": "2021-07-27T05:53:05.201Z",
+        "rentabilidade": 118.21
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 937 DIAS",
+        "tarifa": 0.87,
+        "data_validade": "2024-01-09T15:28:20.861Z",
+        "rentabilidade": 104.31
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 188 DIAS",
+        "tarifa": 1.18,
+        "data_validade": "2021-12-21T19:30:43.272Z",
+        "rentabilidade": 107.48
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 524 DIAS",
+        "tarifa": 1.34,
+        "data_validade": "2022-11-22T15:08:05.702Z",
+        "rentabilidade": 112.99
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 747 DIAS",
+        "tarifa": 0.9,
+        "data_validade": "2023-07-03T11:14:43.102Z",
+        "rentabilidade": 108.66
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 596 DIAS",
+        "tarifa": 0.26,
+        "data_validade": "2023-02-01T23:47:24.589Z",
+        "rentabilidade": 119.39
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 793 DIAS",
+        "tarifa": 1.32,
+        "data_validade": "2023-08-17T22:14:50.300Z",
+        "rentabilidade": 112.55
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 866 DIAS",
+        "tarifa": 0.48,
+        "data_validade": "2023-10-30T13:06:55.585Z",
+        "rentabilidade": 101.74
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 449 DIAS",
+        "tarifa": 0.31,
+        "data_validade": "2022-09-08T19:05:00.613Z",
+        "rentabilidade": 106.33
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 824 DIAS",
+        "tarifa": 1.11,
+        "data_validade": "2023-09-18T19:07:34.325Z",
+        "rentabilidade": 104.66
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 466 DIAS",
+        "tarifa": 1.37,
+        "data_validade": "2022-09-25T18:01:15.367Z",
+        "rentabilidade": 109.76
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 606 DIAS",
+        "tarifa": 1.47,
+        "data_validade": "2023-02-12T09:09:42.525Z",
+        "rentabilidade": 116.43
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 334 DIAS",
+        "tarifa": 0.32,
+        "data_validade": "2022-05-16T05:52:35.840Z",
+        "rentabilidade": 108.74
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 560 DIAS",
+        "tarifa": 0.78,
+        "data_validade": "2022-12-28T05:07:36.964Z",
+        "rentabilidade": 119.78
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 467 DIAS",
+        "tarifa": 1.39,
+        "data_validade": "2022-09-26T08:27:36.856Z",
+        "rentabilidade": 118.25
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 627 DIAS",
+        "tarifa": 0.07,
+        "data_validade": "2023-03-05T08:35:04.409Z",
+        "rentabilidade": 115.88
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 637 DIAS",
+        "tarifa": 0.78,
+        "data_validade": "2023-03-15T16:17:34.570Z",
+        "rentabilidade": 106.89
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 685 DIAS",
+        "tarifa": 0.9,
+        "data_validade": "2023-05-02T19:05:17.682Z",
+        "rentabilidade": 115.45
+    },
+    {
+        "nome": "LCI DI LIQUIDEZ 687 DIAS",
+        "tarifa": 0.76,
+        "data_validade": "2023-05-04T10:39:06.392Z",
+        "rentabilidade": 113.65
+    }
+]
