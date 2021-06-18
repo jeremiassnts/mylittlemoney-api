@@ -6,9 +6,11 @@ var verifyJwt = (req, res, next) => {
         res.status(401).json({ error: true, auth: false, message: 'Nenhum token enviado.' });
     } else {
         jwt.verify(token, process.env.SECRET, (err, decoded) => {
-            if (err) res.status(500).json({ error: true, auth: false, message: 'Autorização negada' })
-            req.userId = decoded.id
-            next()
+            if (err || !decoded) res.status(500).json({ error: true, auth: false, message: 'Autorização negada' })
+            else {
+                req.userId = decoded.id
+                next()
+            }
         })
     }
 }
