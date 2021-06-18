@@ -9,7 +9,7 @@ var getResumo = async (context, req, res) => {
         var totalInvestido = await context.models.investimento.getTotalInvestido(contaUsuario.id, pool)
         var ultimosInvestimentos = await context.models.investimento.getUltimosInvestimentos(contaUsuario.id, 10, pool)
         //historico
-        var historico = await context.models.historico.getHistoricoPorMes(contaUsuario.id, pool)
+        var historico = await context.models.historico.getHistorioPorUsuario(context, user.contausuarioid, pool)
 
         res.json({
             nome: user.nome,
