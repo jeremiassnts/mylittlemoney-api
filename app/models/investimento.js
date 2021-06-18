@@ -2,7 +2,7 @@ const cdb = require('../data/CDB_data.json')
 const lca = require('../data/LCA_data.json')
 const lci = require('../data/LCI_data.json')
 const ipca = require('../data/IPCA_data.json')
-const investimento = require('../routes/investimento')
+const dayjs = require('dayjs')
 
 var getTotalInvestido = async (contaUsuarioId, client) => {
     var result = await client.query(`select * from app.investimentorendafixa where contausuarioid = ${contaUsuarioId}`)
@@ -12,15 +12,18 @@ var getTotalInvestido = async (contaUsuarioId, client) => {
 
 var getUltimosInvestimentos = async (contaUsuarioId, top, client) => {
     var result = await client.query(`select * from app.investimentorendafixa where contausuarioid = ${contaUsuarioId} order by data_agendamento desc limit ${top}`)
-    return result.rows
+    var investimentos = result.rows.sort((a, b) => (dayjs(b.data_agendamento).isAfter(dayjs(a.data_agendamento)) ? 1 : -1))
+    return investimentos
 }
 
-var getResumoInvestimentos = async (contaUsuarioId, client) => {
+var getResumoInvestimentos = async (context, contaUsuarioId, client) => {
     var total = await getTotalInvestido(contaUsuarioId, client)
     var atividade = await getUltimosInvestimentos(contaUsuarioId, 20, client)
+    var historico = await context.models.historico.getHistorioPorUsuario(context, contaUsuarioId, client)
     return {
         total,
         atividade,
+        historico,
         titulos: {
             cdb,
             lca,
@@ -30,12 +33,10 @@ var getResumoInvestimentos = async (contaUsuarioId, client) => {
     }
 }
 
-var realizarInvestimento = async (contaUsuarioId, investimento, client) => {
+var realizarInvestimento = async (context, contaUsuarioId, investimento, client) => {
     try {
         await client.query("BEGIN")
-        var vbruto = investimento.valor_aplicado * (investimento.rentabilidade_prevista / 100)
-        var tarifa_aplicada = (vbruto - investimento.valor_aplicado) * (1 - (investimento.tarifa / 100))
-        var vliquido = investimento.valor_aplicado + tarifa_aplicada
+        const { vbruto, vliquido } = context.services.utils.calcularRendimento(investimento.valor_aplicado, investimento.tarifa, investimento.rentabilidade_prevista)
         await client.query('insert into app.InvestimentoRendaFixa (valor_aplicado, valor_bruto, valor_liquido, tarifa, data_validade, data_agendamento, ativo, rentabilidade_prevista, contaUsuarioId) ' +
             'values ($1, $2, $3, $4, $5, $6, $7, $8, $9) returning *',
             [investimento.valor_aplicado, vbruto, vliquido, investimento.tarifa, investimento.data_validade, investimento.data_agendamento, true, investimento.rentabilidade_prevista, contaUsuarioId])
