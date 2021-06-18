@@ -35,4 +35,22 @@ var realizarInvestimento = async (context, req, res) => {
     }
 }
 
-module.exports = { getResumoInvestimentos, realizarInvestimento }
+var getTitulos = async (context, req, res) => {
+    var pool = context.services.db.getPool()
+    try {
+        var tipo = req.query.tipo.toLowerCase()
+        var titulos = context.models.investimento.getTitulos(tipo)
+        res.json({
+            error: false,
+            titulos
+        })
+    } catch (error) {
+        await pool.end()
+        res.status(400).json({
+            error: true,
+            message: error.stack
+        })
+    }
+}
+
+module.exports = { getResumoInvestimentos, realizarInvestimento, getTitulos }

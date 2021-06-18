@@ -27,5 +27,7 @@
 ### Investimento
     GET /investimento/getResumo
         Rota autenticada para buscar resumo da tela de investimentos
+    GET /investimento/getTitulos
+        Rota autentiada para buscar os títulos disponíveis, é possível enviar nos parâmetros o filtro por tipo -> ex: /investimento/gettitulos?tipo=lca
     POST /investimento/realizarInvestimento
         Rota autenticada para criar investimento associado a conta de usuário com objeto { valor_aplicado, tarifa, data_validade, data_agendamento, rentabilidade_prevista }

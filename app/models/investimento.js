@@ -23,13 +23,23 @@ var getResumoInvestimentos = async (context, contaUsuarioId, client) => {
     return {
         total,
         atividade,
-        historico,
-        titulos: {
-            cdb,
-            lca,
-            lci,
-            ipca
+        historico
+    }
+}
+
+var getTitulos = (tipo) => {
+    var titulos = {
+        cdb,
+        lca,
+        lci,
+        ipca
+    }
+    if (tipo) {
+        return {
+            [tipo]: titulos[tipo]
         }
+    } else {
+        return titulos
     }
 }
 
@@ -48,4 +58,4 @@ var realizarInvestimento = async (context, contaUsuarioId, investimento, client)
     }
 }
 
-module.exports = { getTotalInvestido, getUltimosInvestimentos, getResumoInvestimentos, realizarInvestimento }
+module.exports = { getTotalInvestido, getUltimosInvestimentos, getResumoInvestimentos, realizarInvestimento, getTitulos }
