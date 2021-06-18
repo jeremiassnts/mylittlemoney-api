@@ -1,0 +1,302 @@
+[
+    {
+        "nome": "LCA 321 DIAS",
+        "tarifa": 0.05,
+        "data_validade": "2022-05-03T12:21:50.533Z",
+        "rentabilidade": 107.51
+    },
+    {
+        "nome": "LCA 29 DIAS",
+        "tarifa": 0.65,
+        "data_validade": "2021-07-14T21:12:23.075Z",
+        "rentabilidade": 115.85
+    },
+    {
+        "nome": "LCA 36 DIAS",
+        "tarifa": 0.92,
+        "data_validade": "2021-07-22T17:28:51.890Z",
+        "rentabilidade": 114.42
+    },
+    {
+        "nome": "LCA 453 DIAS",
+        "tarifa": 1.24,
+        "data_validade": "2022-09-12T09:53:58.087Z",
+        "rentabilidade": 108.88
+    },
+    {
+        "nome": "LCA 229 DIAS",
+        "tarifa": 0.68,
+        "data_validade": "2022-01-30T20:38:24.077Z",
+        "rentabilidade": 118.31
+    },
+    {
+        "nome": "LCA 310 DIAS",
+        "tarifa": 0.43,
+        "data_validade": "2022-04-22T07:54:28.510Z",
+        "rentabilidade": 102.42
+    },
+    {
+        "nome": "LCA 236 DIAS",
+        "tarifa": 1.4,
+        "data_validade": "2022-02-07T16:15:18.847Z",
+        "rentabilidade": 101.21
+    },
+    {
+        "nome": "LCA 701 DIAS",
+        "tarifa": 1.13,
+        "data_validade": "2023-05-18T13:27:48.249Z",
+        "rentabilidade": 110.61
+    },
+    {
+        "nome": "LCA 251 DIAS",
+        "tarifa": 0.73,
+        "data_validade": "2022-02-22T08:24:14.792Z",
+        "rentabilidade": 109.07
+    },
+    {
+        "nome": "LCA 516 DIAS",
+        "tarifa": 0.16,
+        "data_validade": "2022-11-13T20:47:36.403Z",
+        "rentabilidade": 101.17
+    },
+    {
+        "nome": "LCA 183 DIAS",
+        "tarifa": 1.49,
+        "data_validade": "2021-12-16T00:37:17.166Z",
+        "rentabilidade": 116.18
+    },
+    {
+        "nome": "LCA 650 DIAS",
+        "tarifa": 1.32,
+        "data_validade": "2023-03-28T01:10:40.121Z",
+        "rentabilidade": 108.31
+    },
+    {
+        "nome": "LCA 223 DIAS",
+        "tarifa": 0.06,
+        "data_validade": "2022-01-25T18:12:09.145Z",
+        "rentabilidade": 102.57
+    },
+    {
+        "nome": "LCA 181 DIAS",
+        "tarifa": 1.37,
+        "data_validade": "2021-12-14T17:16:49.464Z",
+        "rentabilidade": 102.39
+    },
+    {
+        "nome": "LCA 142 DIAS",
+        "tarifa": 0.13,
+        "data_validade": "2021-11-05T14:09:49.184Z",
+        "rentabilidade": 110.73
+    },
+    {
+        "nome": "LCA 179 DIAS",
+        "tarifa": 0.89,
+        "data_validade": "2021-12-12T17:29:08.273Z",
+        "rentabilidade": 102.6
+    },
+    {
+        "nome": "LCA 20 DIAS",
+        "tarifa": 0.96,
+        "data_validade": "2021-07-06T05:00:00.884Z",
+        "rentabilidade": 101.89
+    },
+    {
+        "nome": "LCA 587 DIAS",
+        "tarifa": 0.75,
+        "data_validade": "2023-01-23T22:37:32.355Z",
+        "rentabilidade": 100.02
+    },
+    {
+        "nome": "LCA 506 DIAS",
+        "tarifa": 0.78,
+        "data_validade": "2022-11-04T19:18:16.107Z",
+        "rentabilidade": 114.75
+    },
+    {
+        "nome": "LCA 291 DIAS",
+        "tarifa": 1.14,
+        "data_validade": "2022-04-02T23:38:35.595Z",
+        "rentabilidade": 107.64
+    },
+    {
+        "nome": "LCA 704 DIAS",
+        "tarifa": 0.41,
+        "data_validade": "2023-05-21T08:25:52.881Z",
+        "rentabilidade": 113.1
+    },
+    {
+        "nome": "LCA 431 DIAS",
+        "tarifa": 0.16,
+        "data_validade": "2022-08-21T04:56:10.178Z",
+        "rentabilidade": 104.9
+    },
+    {
+        "nome": "LCA 181 DIAS",
+        "tarifa": 1.11,
+        "data_validade": "2021-12-14T03:24:38.979Z",
+        "rentabilidade": 104.2
+    },
+    {
+        "nome": "LCA 60 DIAS",
+        "tarifa": 1.37,
+        "data_validade": "2021-08-15T05:38:31.814Z",
+        "rentabilidade": 117.67
+    },
+    {
+        "nome": "LCA 444 DIAS",
+        "tarifa": 1.29,
+        "data_validade": "2022-09-03T01:05:38.772Z",
+        "rentabilidade": 104.22
+    },
+    {
+        "nome": "LCA 572 DIAS",
+        "tarifa": 1.42,
+        "data_validade": "2023-01-09T14:17:08.500Z",
+        "rentabilidade": 111.52
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 131 DIAS",
+        "tarifa": 0.05,
+        "data_validade": "2021-10-25T05:24:56.234Z",
+        "rentabilidade": 113.33
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 46 DIAS",
+        "tarifa": 0.13,
+        "data_validade": "2021-08-01T01:04:39.069Z",
+        "rentabilidade": 100.56
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 274 DIAS",
+        "tarifa": 1.12,
+        "data_validade": "2022-03-17T17:30:51.292Z",
+        "rentabilidade": 111.11
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 503 DIAS",
+        "tarifa": 0.13,
+        "data_validade": "2022-11-01T14:37:14.992Z",
+        "rentabilidade": 109.25
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 719 DIAS",
+        "tarifa": 0.53,
+        "data_validade": "2023-06-05T12:22:53.215Z",
+        "rentabilidade": 115.49
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 536 DIAS",
+        "tarifa": 1.21,
+        "data_validade": "2022-12-04T11:17:15.223Z",
+        "rentabilidade": 119.18
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 34 DIAS",
+        "tarifa": 1.47,
+        "data_validade": "2021-07-20T03:07:06.761Z",
+        "rentabilidade": 116.82
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 383 DIAS",
+        "tarifa": 0.32,
+        "data_validade": "2022-07-04T16:39:02.403Z",
+        "rentabilidade": 111.6
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 719 DIAS",
+        "tarifa": 0.08,
+        "data_validade": "2023-06-05T18:39:30.111Z",
+        "rentabilidade": 103.7
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 291 DIAS",
+        "tarifa": 0.5,
+        "data_validade": "2022-04-03T09:12:58.558Z",
+        "rentabilidade": 109.63
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 332 DIAS",
+        "tarifa": 0.67,
+        "data_validade": "2022-05-14T00:05:38.663Z",
+        "rentabilidade": 109.7
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 554 DIAS",
+        "tarifa": 0.15,
+        "data_validade": "2022-12-22T05:02:56.563Z",
+        "rentabilidade": 100.25
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 507 DIAS",
+        "tarifa": 1.31,
+        "data_validade": "2022-11-05T09:26:26.874Z",
+        "rentabilidade": 117.36
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 626 DIAS",
+        "tarifa": 0.49,
+        "data_validade": "2023-03-04T05:39:07.556Z",
+        "rentabilidade": 101.61
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 523 DIAS",
+        "tarifa": 1.33,
+        "data_validade": "2022-11-21T11:08:57.399Z",
+        "rentabilidade": 119.7
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 14 DIAS",
+        "tarifa": 1.34,
+        "data_validade": "2021-06-30T03:20:54.675Z",
+        "rentabilidade": 112.99
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 635 DIAS",
+        "tarifa": 0.02,
+        "data_validade": "2023-03-13T17:55:34.443Z",
+        "rentabilidade": 116.8
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 728 DIAS",
+        "tarifa": 0.95,
+        "data_validade": "2023-06-14T19:03:25.231Z",
+        "rentabilidade": 113.32
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 579 DIAS",
+        "tarifa": 0.71,
+        "data_validade": "2023-01-15T21:10:01.073Z",
+        "rentabilidade": 118.84
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 5 DIAS",
+        "tarifa": 1.34,
+        "data_validade": "2021-06-21T01:26:15.141Z",
+        "rentabilidade": 103.71
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 420 DIAS",
+        "tarifa": 1.33,
+        "data_validade": "2022-08-10T05:47:38.696Z",
+        "rentabilidade": 113.06
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 227 DIAS",
+        "tarifa": 1.49,
+        "data_validade": "2022-01-29T01:26:59.210Z",
+        "rentabilidade": 119.6
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 344 DIAS",
+        "tarifa": 1.15,
+        "data_validade": "2022-05-26T06:30:45.657Z",
+        "rentabilidade": 109.53
+    },
+    {
+        "nome": "LCA DI LIQUIDEZ 17 DIAS",
+        "tarifa": 0.8,
+        "data_validade": "2021-07-03T08:16:09.061Z",
+        "rentabilidade": 113.08
+    }
+]
