@@ -30,7 +30,7 @@ var realizarInvestimento = async (context, req, res) => {
         await pool.end()
         res.status(400).json({
             error: true,
-            message: error.stack
+            message: error.stack ? error.stack : error
         })
     }
 }

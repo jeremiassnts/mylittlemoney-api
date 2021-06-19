@@ -57,7 +57,7 @@ var realizarInvestimento = async (context, contaUsuarioId, investimento, client)
             'values ($1, $2, $3, $4, $5, $6, $7, $8, $9) returning *',
             [investimento.valor_aplicado, vbruto, vliquido, investimento.tarifa, investimento.data_validade, investimento.data_agendamento, true, investimento.rentabilidade_prevista, contaUsuarioId])
         //retira da conta
-        await client.query(`update app.contausuario set saldo_bancario = saldo_bancario - $1 where id = $2`, [transferencia.valor, contaUsuarioId])
+        await client.query(`update app.contausuario set saldo_bancario = saldo_bancario - $1 where id = $2`, [investimento.valor_aplicado, contaUsuarioId])
         await client.query("COMMIT")
     } catch (error) {
         await client.query("ROLLBACK")
