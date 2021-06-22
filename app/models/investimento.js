@@ -47,9 +47,9 @@ var realizarInvestimento = async (context, contaUsuarioId, investimento, client)
     try {
         await client.query("BEGIN")
         const { vbruto, vliquido } = context.services.utils.calcularRendimento(investimento.valor_aplicado, investimento.tarifa, investimento.rentabilidade_prevista)
-        await client.query('insert into app.InvestimentoRendaFixa (valor_aplicado, valor_bruto, valor_liquido, tarifa, data_validade, data_agendamento, ativo, rentabilidade_prevista, contaUsuarioId) ' +
-            'values ($1, $2, $3, $4, $5, $6, $7, $8, $9) returning *',
-            [investimento.valor_aplicado, vbruto, vliquido, investimento.tarifa, investimento.data_validade, investimento.data_agendamento, true, investimento.rentabilidade_prevista, contaUsuarioId])
+        await client.query('insert into app.InvestimentoRendaFixa (titulo, valor_aplicado, valor_bruto, valor_liquido, tarifa, data_validade, data_agendamento, ativo, rentabilidade_prevista, contaUsuarioId) ' +
+            'values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) returning *',
+            [investimento.titulo, investimento.valor_aplicado, vbruto, vliquido, investimento.tarifa, investimento.data_validade, investimento.data_agendamento, true, investimento.rentabilidade_prevista, contaUsuarioId])
 
         await client.query("COMMIT")
     } catch (error) {
