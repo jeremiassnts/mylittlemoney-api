@@ -8,7 +8,11 @@ var getContaById = async (id, client) => {
 var transferir = async (transferencia, contausuarioid, client) => {
     try {
         await client.query("BEGIN")
-        var result = null
+        //verifica saldo
+        var result = await client.query(`select * from app.contausuario where id = ${contausuarioid}`)
+        if(result.rows[0].saldo_bancario < transferencia.valor){
+            throw "Saldo insuficiente"
+        }
         result = await client.query(`select * from app.contabancaria where numero_conta = $1 and numero_agencia = $2 and numero_banco = $3`,
             [transferencia.numero_conta, transferencia.numero_agencia, transferencia.numero_banco])
         var contaBancariaId, contaExternaId;
