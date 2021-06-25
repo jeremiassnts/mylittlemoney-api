@@ -19,7 +19,7 @@ var getUltimosInvestimentos = async (contaUsuarioId, top, client) => {
 var getResumoInvestimentos = async (context, contaUsuarioId, client) => {
     var total = await getTotalInvestido(contaUsuarioId, client)
     var atividade = await getUltimosInvestimentos(contaUsuarioId, 20, client)
-    var historico = await context.models.historico.getHistorioPorUsuario(context, contaUsuarioId, client)
+    var historico = await context.models.historico.getHistoricoPorUsuario(context, contaUsuarioId, client, false)
     return {
         total,
         atividade,
