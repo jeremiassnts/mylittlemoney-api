@@ -78,12 +78,6 @@
         "rentabilidade": 102.57
     },
     {
-        "nome": "LCA 181 DIAS",
-        "tarifa": 1.37,
-        "data_validade": "2021-12-14T17:16:49.464Z",
-        "rentabilidade": 102.39
-    },
-    {
         "nome": "LCA 142 DIAS",
         "tarifa": 0.13,
         "data_validade": "2021-11-05T14:09:49.184Z",
@@ -178,12 +172,6 @@
         "tarifa": 0.13,
         "data_validade": "2022-11-01T14:37:14.992Z",
         "rentabilidade": 109.25
-    },
-    {
-        "nome": "LCA DI LIQUIDEZ 719 DIAS",
-        "tarifa": 0.53,
-        "data_validade": "2023-06-05T12:22:53.215Z",
-        "rentabilidade": 115.49
     },
     {
         "nome": "LCA DI LIQUIDEZ 536 DIAS",
