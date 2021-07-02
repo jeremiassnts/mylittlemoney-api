@@ -38,7 +38,7 @@ var realizarInvestimento = async (context, req, res) => {
 var getTitulos = async (context, req, res) => {
     var pool = context.services.db.getPool()
     try {
-        var tipo = req.query.tipo.toLowerCase()
+        var tipo = req.query.tipo ? req.query.tipo.toLowerCase() : null
         var titulos = context.models.investimento.getTitulos(tipo)
         res.json({
             error: false,
