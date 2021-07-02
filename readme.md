@@ -13,7 +13,7 @@
     POST /user/criarusuario
         Rota para criar usuário baseado em um objeto { nome, email, senha }
     PUT /user/editarusuario
-        Rota autenticada para realizar edição de usuário com objeto { user: {...}, telefone: {...}, endereco: {...} }
+        Rota autenticada para realizar edição de usuário com objeto { user: { nome, username, cpf, rg, ocupacao }, telefone: { ddi, ddd, telefone }, endereco: { cep, logradouro, numero, bairro, cidade, estado, pais, complemento } }
 ### Conta
     GET /conta/resumo
         Rota para buscar resumo de conta de usuário baseada em token de autenticação
