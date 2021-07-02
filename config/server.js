@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "OPTIONS, Accept, Authorization, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Header");
-  res.header("Access-Control-Allow-Methods: POST, PUT, GET, OPTIONS")
+  res.header("Access-Control-Allow-Methods", "*")
   next();
 });
 
