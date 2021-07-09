@@ -99,14 +99,29 @@ var edit = async (userId, fields, client) => {
     try {
         await client.query("BEGIN")
         const { user, telefone, endereco } = fields
-        var result = await client.query(`update app.usuario set nome = '${user.nome}', username = '${user.username}', cpf = '${user.cpf}'`
-        + `, rg = '${user.rg}', ocupacao = '${user.ocupacao}' where id = ${userId} returning *`)
+        var result = await client.query(`update app.usuario set nome = '${user.nome}', cpf = '${user.cpf}'`
+            + `, ocupacao = '${user.ocupacao}' where id = ${userId} returning *`)
         const { telefoneid, enderecoid } = result.rows[0]
 
-        await client.query(`update app.telefone set ddi = '${telefone.ddi}', ddd = '${telefone.ddd}', numero = '${telefone.telefone}' where id = ${telefoneid}`)
+        if (telefoneid) {
+            await client.query(`update app.telefone set ddi = '${telefone.ddi}', ddd = '${telefone.ddd}', numero = '${telefone.telefone}' where id = ${telefoneid}`)
+        } else {
+            //cria telefone
+            result = await client.query(`insert into app.telefone (ddi, ddd, numero) values ($1, $2, $3) returning *`, [telefone.ddi, telefone.ddd, telefone.telefone])
+            const { id: telefoneId } = result.rows[0]
+            await client.query(`update app.usuario set telefoneid = ${telefoneId} where id = ${userId}`)
+        }
 
-        await client.query(`update app.endereco set cep = '${endereco.cep}', logradouro = '${endereco.logradouro}', numero = ${endereco.numero}, bairro = '${endereco.bairro}'`
-        + `, cidade = '${endereco.cidade}', estado = '${endereco.estado}', pais = '${endereco.pais}', complemento = '${endereco.complemento}' where id = ${enderecoid}`)
+        if (enderecoid) {
+            await client.query(`update app.endereco set cep = '${endereco.cep}', logradouro = '${endereco.logradouro}', numero = ${endereco.numero}, bairro = '${endereco.bairro}'`
+                + `, cidade = '${endereco.cidade}', estado = '${endereco.estado}', pais = '${endereco.pais}', complemento = '${endereco.complemento}' where id = ${enderecoid}`)
+        } else {
+            //cria endereco
+            var result = await client.query(`insert into app.endereco (cep, logradouro, numero, bairro, cidade, estado, pais, complemento) values ($1, $2, $3, $4, $5, $6, $7, $8) returning *`,
+                [endereco.cep, endereco.logradouro, endereco.numero, endereco.bairro, endereco.cidade, endereco.estado, endereco.pais, endereco.complemento])
+            const { id: enderecoId } = result.rows[0]
+            await client.query(`update app.usuario set enderecoId = ${enderecoId} where id = ${userId}`)
+        }
 
         await client.query("COMMIT")
         return result.rows[0]
