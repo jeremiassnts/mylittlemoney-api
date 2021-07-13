@@ -43,7 +43,7 @@ var login = async (context, req, res) => {
         const hash = sjcl.codec.hex.fromBits(bits)
         var result = await pool.query(`select * from app.usuario where email = '${user.email}' and senha = '${hash}'`)
         if (result.rows.length > 0) {
-            const token = jwt.sign({ id: result.rows[0].id }, process.env.SECRET, { expiresIn: '5 days' })
+            const token = jwt.sign({ id: result.rows[0].id }, process.env.SECRET, {})
             await pool.end()
             res.json({
                 error: false,
